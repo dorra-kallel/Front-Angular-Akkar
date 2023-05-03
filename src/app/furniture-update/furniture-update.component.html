@@ -1,0 +1,53 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Update furniture </h3>
+    <form (ngSubmit)="onSubmit()">
+  
+      <div class="form-group">
+        <label for="furnitureCategory">Furniture Category</label>
+        <select [(ngModel)]="furniture.furniture_category" name="furnitureCategory" class="form-control">
+          <option value="BedRoom">BedRoom</option>
+          <option value="LivingRoom">LivingRoom</option>
+          <option value="KidsRoom">KidsRoom</option>
+          <option value="Decoration">Decoration</option>
+          <option value="Kitchen">Kitchen</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="furnitureName">Furniture Name</label>
+
+        <input name="furnitureName" #furnitureName="ngModel" [(ngModel)]="furniture.furniture_name"
+          placeholder="Enter furniture name..." />
+      </div>
+
+      <div class="form-group">
+        <label for="furniturePrice">Furniture Price</label>
+        <input required type="number" [(ngModel)]="furniture.furniture_price" name="furniturePrice"
+          class="form-control" placeholder="Enter furniture price..." />
+      </div>
+
+      <div class="form-group">
+        <label for="publicationDate">Publication Date</label>
+        <input type="date" [(ngModel)]="furniture.publication_date" name="publicationDate" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="availability">Availability</label>
+        <input type="checkbox" [(ngModel)]="furniture.availability" name="availability" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="furniture_picture">furniture picture</label>
+      <input name="furniture_picture" #furniture_picture="ngModel" [(ngModel)]="furniture.furniture_picture"
+      placeholder="Enter furniture name..." />
+  </div>
+
+      <div class="form-group">
+        <label for="stock">Stock</label>
+        <input type="number" [(ngModel)]="furniture.stock" name="stock" class="form-control" />
+      </div>
+  
+      <button class="btn btn-success" type="submit">Submit</button>
+      <input type="button" value="Go back!" onclick="history.back()">
+  
+    </form>
+  </div>
+  

@@ -1,0 +1,43 @@
+<div class="body table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <!--      <th>Id</th>-->
+          <th>furnitureCategory</th>
+          <th>furnitureName</th>
+          <th>furniturePrice</th>
+          <th>publicationDate</th>
+          <th>availability</th>
+          <th>stock</th>
+          <th>salesCount</th>
+          <th>Image</th>
+          <th>Delete</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let f of ListFurniture">
+          <!--  <th scope="row">{{equipment.id_eq}}</th>-->
+          <td>{{f.furniture_category}}</td>
+          <td>{{f.furniture_name}}</td>
+          <td>{{f.furniture_price}}</td>
+          <td>{{f.publication_date}}</td>
+          <td>{{f.availability}}</td>
+          <td>{{f.stock}}</td>
+          <td>{{f.salesCount}}</td>
+          <td><img [src]="f.furniture_picture" alt="Furniture Image"></td>
+          <td><button (click)="deleteFurniture(f.furnitureId)" type="button" class="btn btn-primary">Delete</button></td>
+          <td><button (click)="updateFurniture(f.furnitureId)" type="button" class="btn btn-info"> Update</button></td>
+          <td><button (click)="furnitureDetails(f.furnitureId)" type="button" class = "btn btn-info"> View</button></td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <button [routerLink]="['/furniture']" type="button" class="btn btn-primary">ADD FURNITURE</button>
+    </div>
+  </div>
+  

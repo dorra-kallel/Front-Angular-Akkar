@@ -1,0 +1,24 @@
+<form #commandForm="ngForm" (ngSubmit)="ajouterCommande()">
+    <div class="form-group">
+      <label for="quantity">Quantité :</label>
+      <input type="number" class="form-control" id="quantity" name="quantity" required [(ngModel)]="command.quantity" (change)="calculerPrixTotal()">
+    </div>
+    <div class="form-group">
+      <label for="commandDate">Date de la commande :</label>
+      <input type="date" class="form-control" id="commandDate" name="commandDate" required [(ngModel)]="command.commandDate">
+    </div>
+    <div class="form-group">
+      <label for="totalPrice">Prix total :</label>
+      <input type="number" class="form-control" id="totalPrice" name="totalPrice" [(ngModel)]="command.totalPrice" readonly>
+    </div>
+    <div class="form-group">
+      <label for="payementStatus">Statut de paiement :</label>
+      <select class="form-control" id="payementStatus" name="payementStatus" required [(ngModel)]="command.payementStatus">
+        <option value="">Sélectionner un statut de paiement</option>
+        <option value="PAYÉ">PAYÉ</option>
+        <option value="NON PAYÉ">NON PAYÉ</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Ajouter la commande</button>
+  </form>
+  

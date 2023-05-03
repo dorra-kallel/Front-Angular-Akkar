@@ -1,0 +1,39 @@
+<p>display-command works!</p>
+<div class="body table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+            
+          <!--      <th>Id</th>-->
+          <th>quantity</th>
+          <th>commandDate</th>
+          <th>totalPrice</th>
+          <th>payementStatus</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of listCommand">
+          <!--  <th scope="row">{{equipment.id_eq}}</th>-->
+          <td>{{c.quantity}}</td>
+          <td>{{c.commandDate}}</td>
+          <td>{{c.totalPrice}}</td>
+          <td>{{c.payementStatus}}</td>
+        
+        
+          <td><button (click)="deleteCommand(c.commandId)" type="button" class="btn btn-primary">Delete</button></td>
+          <td><button (click)="commandDetails(c.commandId)" type="button" class = "btn btn-info"> View</button></td>
+          <!--<td><button (click)="updateFurniture(f.furnitureId)" type="button" class="btn btn-info"> Update</button></td>
+          <td>-->
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <button [routerLink]="['/addF']" type="button" class="btn btn-primary">ADD FURNITURE</button>
+    </div>
+  </div>
+  

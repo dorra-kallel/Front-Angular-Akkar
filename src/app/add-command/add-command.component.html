@@ -1,0 +1,32 @@
+<p>add-command works!</p>
+<div class="body table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <!--      <th>Id</th>-->
+          <th>furnitureCategory</th>
+          <th>furnitureName</th>
+          <th>furniturePrice</th>
+          <th>availability</th>
+          <th>Image</th>
+          <th>Cart</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let f of ListFurniture">
+          <td>{{f.furniture_category}}</td>
+          <td>{{f.furniture_name}}</td>
+          <td>{{f.furniture_price}}</td>
+          <td>{{f.availability}}</td>
+          <td><img [src]="f.furniture_picture" alt="Furniture Image"></td>
+          <td><button (click)="addToCartt(f.furnitureId)" type="button" class = "btn btn-info"> add to cartt</button></td>
+          
+         
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
