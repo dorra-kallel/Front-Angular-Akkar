@@ -1,0 +1,45 @@
+<p>update-reclamation works!</p>
+<p>ajout-reclamation works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+          <legend class="text-center">Enter reclamation </legend>
+         
+          
+          <div class="form-group">
+            <label for="title">title</label>
+            <input name="title" #title="ngModel" [(ngModel)]="rec.title"
+              placeholder="Enter title ..." class="form-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="content">content</label>
+            <input name="content" #title="ngModel" [(ngModel)]="rec.content"
+             placeholder="Enter content ..." class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="reason">reason</label>
+            <input name="reason" #title="ngModel" [(ngModel)]="rec.reason"
+             placeholder="Enter reason ..." class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="status">status</label>
+            <input type="checkbox" [(ngModel)]="rec.status" name="status" class="form-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="dateFeedback"> Date</label>
+            <input type="date" [(ngModel)]="rec.dateFeedback" name="dateFeedback" class="form-control" />
+          </div>
+
+          <button class="btn btn-success" type="submit">Submit</button>
+          <input type="button" value="Go back!" onclick="history.back()">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
