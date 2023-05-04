@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<div>
+    <div>
+        <div class="d-flex flex-nowrap">
+      
+         
+          </div>
+         <table class="table" style="width:70%;margin-left: 150px;">
+          <thead>
+            <tr>
+                
+              <th scope="col">Title</th>
+              <th scope="col">description</th>
+              <th scope="col">Category</th>
+              <th scope="col">price</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let a of announcements | paginate :{itemsPerPage:6,currentPage:p} ">
+                <th scope="row">{{a.title}}</th>
+                <th scope="row">{{a.description }}</th>
+                
+                <th scope="row">{{a.announcementType }}</th>
+                <th scope="row">{{a.price }}</th>
+                
+                  
+               
+             
+            </tr>
+             <pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls> 
+          
+          </tbody>
+        </table> 
+        <button class="inline-btn"(click)=" list()">go back to list</button>
+        
+      </div>
+    
+    <app-footer></app-footer>

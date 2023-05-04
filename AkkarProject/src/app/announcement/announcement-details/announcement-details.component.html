@@ -1,0 +1,31 @@
+
+<app-header></app-header>
+  <div class="home">
+
+    <section class="center">
+ 
+       <form action="search.html" method="post">
+          <h3>Titre : {{a.title}}</h3>
+          <div class="box">
+             <p>Description: {{a.description}} <span>*</span></p>
+             
+          </div>
+          <div class="box">
+            <p>AnnouncementType: {{a.announcementType}} <span>*</span></p>
+            
+         </div>
+         <div class="box">
+          <p>Price: {{a.price}} <span>*</span></p>
+          
+       </div>
+          
+       </form>
+ 
+    </section>
+ 
+ </div>
+ <button class="inline-btn" style="margin-right: 10px;" (click)="list()">Go back To List</button>
+ <button class="inline-btn" style="margin-right: 10px;" (click)="similarList(a.idAnnouncemenet)">similar list</button>
+ <button class="inline-btn" (click)="addToFavourite()">addToFavourite</button>
+ 
+ <app-footer></app-footer>

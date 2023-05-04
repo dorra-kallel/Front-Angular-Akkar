@@ -1,0 +1,49 @@
+<app-header></app-header>
+<br><br>
+
+
+  <div class="home">
+
+    <section class="center">
+ 
+       <form action="search.html" (ngSubmit)="onSubmit()" method="post">
+          <h3>update your announcement</h3>
+          <div class="box">
+             <p>enter title <span>*</span></p>
+             <input type="text" name="title" required maxlength="50" placeholder="enter title*" class="input" [(ngModel)]="a.title">
+          </div>
+          <div class="box">
+            <p>enter description <span>*</span></p>
+            <textarea type="text" name="description" required  placeholder="enter description*" class="input"[(ngModel)]="a.description"></textarea>
+         </div>
+         <div class="box">
+          <p>enter price <span>*</span></p>
+          <input type="text" name="price" required maxlength="50" placeholder="enter price*" class="input"[(ngModel)]="a.price">
+       </div>
+       <div class="box">
+        <p for="announcementType">AnnouncementType: <span>*</span></p>
+        <!-- <label for="announcementType" style="color: black; ">AnnouncementType:</label> -->
+ <select id="announcementType" name="announcementType" [(ngModel)]="a.announcementType"  name="maximum" class="input" size="4">
+   <option value="State">State</option>
+   <option value="Rental">Rental</option>
+   <option value="ShortTermRental">ShortTermRental</option>
+   <option value="Commercial">Commercial</option>
+ </select>
+        </div>
+
+     <br><br>
+  
+      <button type="submit" class="inline-btn" >Submit</button>
+          
+       </form>
+ 
+    </section>
+ 
+ </div>
+ <div >
+    
+  <button class="inline-btn" (click)="goToList()">goToList</button>
+</div>
+ 
+  <app-footer></app-footer>
+  
