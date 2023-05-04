@@ -1,0 +1,248 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+ 
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+ 
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+ 
+ </head>
+ <body>
+    
+ <!-- header section starts  -->
+ 
+ <header class="header">
+ 
+    <nav class="navbar nav-1">
+       <section class="flex">
+          <a href="home.html" class="logo"><i class="fas fa-house"></i>MyHome</a>
+ 
+          <ul>
+             <li><a href="#">post property<i class="fas fa-paper-plane"></i></a></li>
+          </ul>
+       </section>
+    </nav>
+ 
+    <nav class="navbar nav-2">
+       <section class="flex">
+          <div id="menu-btn" class="fas fa-bars"></div>
+ 
+          <div class="menu">
+             <ul>
+                <li><a href="#">buy<i class="fas fa-angle-down"></i></a>
+                   <ul>
+                      <li><a href="#">house</a></li>
+                      <li><a href="#">flat</a></li>
+                      <li><a href="#">shop</a></li>
+                      <li><a href="#">ready to move</a></li>
+                      <li><a href="#">furnished</a></li>
+                   </ul>
+                </li>
+                <li><a href="#">sell<i class="fas fa-angle-down"></i></a>
+                   <ul>
+                      <li><a href="#">post property</a></li>
+                      <li><a href="#">dashboard</a></li>
+                   </ul>
+                </li>
+                <li><a href="#">rent</a>
+                   <ul>
+                      <li><a href="#">house</a></li>
+                      <li><a href="#">flat</a></li>
+                      <li><a href="#">shop</a></li>
+                   </ul>
+                </li>
+                <li><a href="#">help<i class="fas fa-angle-down"></i></a>
+                   <ul>
+                      <li><a href="about.html">about us</a></li>
+                      <li><a href="contact.html">contact us</a></li>
+                      <li><a href="contact.html#faq">FAQ</a></li>
+                   </ul>
+                </li>
+             </ul>
+          </div>
+ 
+          <ul>
+             <li><a href="#">saved <i class="far fa-heart"></i></a></li>
+             <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+                <ul>
+                   <li><a href="login.html">login</a></li>
+                   <li><a href="register.html">register</a></li>
+                </ul>
+             </li>
+          </ul>
+       </section>
+    </nav>
+ 
+ </header>
+ 
+ <!-- header section ends -->
+ 
+ <!-- register section starts  -->
+ 
+ <section class="form-container">
+ 
+    
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <fieldset>
+                            <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                                        required *</small></span></legend>
+
+                                        <div class="form-group">
+                                            <label for="Name"><span class="req">* </span> birthday: <small>This will be your login user
+                                                    name</small> </label>
+                                            <input required type="text" [(ngModel)]="Expert.birthday" name="name" id="name"
+                                                class="form-control phone" maxlength="28" placeholder="birthday" />
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label for="email"><span class="req">* </span> email: </label>
+                                            <input class="form-control" required type="email" [(ngModel)]="Expert.email" name="domain"
+                                                id="email" placeholder="email" />
+                                            <div class="status" id="status"></div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label for="email"><span class="req">* </span> firstname: </label>
+                                            <input class="form-control" required type="text" [(ngModel)]="Expert.firstname" name="domain"
+                                                id="email" placeholder="firstname" />
+                                            <div class="status" id="status"></div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label for="email"><span class="req">* </span>lastname </label>
+                                            <input class="form-control" required type="text" [(ngModel)]="Expert.lastname" name="domain"
+                                                id="email" placeholder="lastname" />
+                                            <div class="status" id="status"></div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label for="email"><span class="req">* </span> password: </label>
+                                            <input class="form-control" required type="password" [(ngModel)]="Expert.password" name="domain"
+                                                id="email" placeholder="password" />
+                                            <div class="status" id="status"></div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label for="email"><span class="req">* </span> sexe: </label>
+                                            <input class="form-control" required type="text" [(ngModel)]="Expert.sexe" name="domain"
+                                                id="email" placeholder="sexe" />
+                                            <div class="status" id="status"></div>
+                                        </div>
+        
+                             <div class="form-group">
+                                <label for="Name"><span class="req">* </span> Cin:  </label>
+                                <input required type="text" [(ngModel)]="Expert.cin" name="name" id="name"
+                                    class="form-control" maxlength="28" placeholder="Cin" />
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="email"><span class="req">* </span> description: </label>
+                                <input class="form-control" required type="text" [(ngModel)]="Expert.description" name="domain"
+                                    id="email" placeholder="description" />
+                                <div class="status" id="status"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email"><span class="req">* </span> expertLocation: </label>
+                                <input class="form-control" required type="text" [(ngModel)]="Expert.expertLocation" name="domain"
+                                    id="email" placeholder="fexpertLocation" />
+                                <div class="status" id="status"></div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="lastname"><span class="req">* </span> expertPrice : </label>
+                                <input class="form-control" type="text" [(ngModel)]="Expert.expertPrice" name="experience" id="txt"
+                                    placeholder="expertPrice" required />
+                                <div id="errLast"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="firstname"><span class="req">* </span> Pictures: </label>
+                                <input class="form-control" type="text" [(ngModel)]="Expert.pictures" name="email" id="txt" required
+                                    placeholder="Pictures" />
+                                <div id="errFirst"></div>
+                            </div>
+        
+                           
+        
+                            <div class="form-group">
+                                <label for="email"><span class="req">* </span> status: </label>
+                                <input class="form-control" required type="text" [(ngModel)]="Expert.status" name="domain"
+                                    id="email" placeholder="status" />
+                                <div class="status" id="status"></div>
+                            </div>
+        
+                           
+        
+                            
+        
+                            <div class="form-group">
+                                <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                            </div>
+                        </fieldset>
+                    </form><!-- ends register form -->
+                    <!-- second for to fiter user-->
+                </div><!-- ends col-6 -->
+        
+            </div>
+        
+    
+ 
+ </section>
+ 
+ <!-- register section ends -->
+ 
+ <!-- footer section starts  -->
+ 
+ <footer class="footer">
+ 
+    <section class="flex">
+ 
+       <div class="box">
+          <a href="tel:1234567890"><i class="fas fa-phone"></i><span>123456789</span></a>
+          <a href="tel:1112223333"><i class="fas fa-phone"></i><span>1112223333</span></a>
+          <a href="mailto:shaikhanas@gmail.com"><i class="fas fa-envelope"></i><span>shaikhanas@gmail.com</span></a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i><span>mumbai, india - 400104</span></a>
+       </div>
+ 
+ 
+       <div class="box">
+          <a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><span>twitter</span><i class="fab fa-twitter"></i></a>
+          <a href="#"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
+          <a href="#"><span>instagram</span><i class="fab fa-instagram"></i></a>
+ 
+       </div>
+ 
+    </section>
+ 
+    <div class="credit">© copyright @ 2022 by <span>Akkar</span> | all rights reserved!</div>
+ 
+ </footer>
+ 
+ <!-- footer section ends -->
+ 
+ 
+ <!-- custom js file link  -->
+ <script src="../../../assets/js/script.js"></script>
+ 
+ 
+ </body></html>
+
+
+
+
+
+
+
+
+
+
