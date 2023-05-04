@@ -10,11 +10,12 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ViewPropertyComponent } from './pages/view-property/view-property.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PostsComponent } from './pages/posts/posts.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddReservationComponent } from './pages/add-reservation/add-reservation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     HomeComponent,
     LoginComponent,
     ListingsComponent,
@@ -22,12 +23,17 @@ import { PostsComponent } from './pages/posts/posts.component';
     ViewPropertyComponent,
     ContactComponent,
     PostsComponent,
+    AddReservationComponent,
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

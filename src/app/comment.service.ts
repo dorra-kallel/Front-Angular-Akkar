@@ -15,7 +15,7 @@ export class CommentService {
     comment.voteCount = 0;
     console.log(comment);
 
-    return this.myHttp.post(this.postURL+"add/"+id+"/1",comment)
+    return this.myHttp.post(this.postURL+"add/4/1",comment)
   }
   getPostCommments(postId:number):Observable<Comment[]>{
     return this.myHttp.get<Comment[]>(this.postURL+"get/post/"+postId);

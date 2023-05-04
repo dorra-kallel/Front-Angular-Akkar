@@ -7,6 +7,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ViewPropertyComponent } from './pages/view-property/view-property.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PostsComponent } from './pages/posts/posts.component';
+import { AddReservationComponent } from './pages/add-reservation/add-reservation.component';
 ContactComponent
 ViewPropertyComponent
 const routes: Routes = [
@@ -17,6 +18,8 @@ const routes: Routes = [
   {path:"register",component:RegisterComponent},
   {path:"view",component: ViewPropertyComponent},
   {path:"posts",component: PostsComponent},
+  {path:"add/reservation",component: AddReservationComponent},
+
 
   {path:"", redirectTo:"home", pathMatch:"full"},
 

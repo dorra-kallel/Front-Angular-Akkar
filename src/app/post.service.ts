@@ -27,10 +27,11 @@ export class PostService {
     return this.myHttp.get<post>(this.postURL+"get/post/"+id);
 
   }
-  getPostsByCategory(cat : PostTopic):Observable<post[]>{
+  getPostsByCategory(cat : string):Observable<post[]>{
     return this.myHttp.get<post[]>(this.postURL+"get/category/"+cat);
 
   }
+
   getPostsByUserId(uid : number):Observable<post[]>{
     return this.myHttp.get<post[]>(this.postURL+"findBy/user/"+uid);
 

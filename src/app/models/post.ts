@@ -1,5 +1,11 @@
+import { NgModule } from '@angular/core';
 import { Comment } from './comment';
-
+import { FormsModule } from '@angular/forms';
+@NgModule({
+  imports: [
+    FormsModule
+  ],
+})
 export class post {
   postId!: number;
   postTitle!: string;

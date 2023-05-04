@@ -15,7 +15,6 @@ export class ReservationService {
   }
   exportPDF(ReservationId:number){
     return this.myHttp.get(this.reservationURL+ ReservationId+"/pdf");
-
   }
   cancelReservation(reservationId:number){
     return this.myHttp.put(this.reservationURL+"cancelReservationIfWithinTwoDays/"+reservationId,null);
