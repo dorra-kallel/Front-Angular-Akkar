@@ -40,11 +40,12 @@ export class AddReservationComponent implements OnInit {
         }
       }
     );  }
-  deleteReservation(idRes: number) {
-    console.log(idRes);
+  deleteReservation(reset: Reservation) {
+    console.log(reset);
     console.log("test");
 
-    this.Rs.cancelReservation(idRes).subscribe(
+
+    this.Rs.cancelReservation(reset.idRes).subscribe(
       () => {
 
             alert('Reservation canceled successfully!');
